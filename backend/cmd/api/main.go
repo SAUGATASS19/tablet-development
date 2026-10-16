@@ -29,6 +29,8 @@ func main() {
 	{
 		// The health check is now accessible at /api/v1/health
 		v1.GET("/health", handlers.HealthCheck)
+		v1.POST("/register", handlers.RegisterUser)
+    	v1.POST("/login", handlers.LoginUser)
 	}
 
 	srv := &http.Server{
