@@ -20,6 +20,8 @@ services:
       - "5050:80"
     depends_on:
       - db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin  # Map the volume to pgAdmin's internal storage
 
   # Redis In-Memory Cache
   redis:
@@ -37,3 +39,4 @@ services:
 
 volumes:
   pgdata:
+  pgadmin_data:
